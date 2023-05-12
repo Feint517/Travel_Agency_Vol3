@@ -1,0 +1,6 @@
+:root {
+   --mainColor: rgba(63, 25, 235, 1);  /* #3f19eb */
+   --gradient: linear-gradient(270deg, hsla(251, 84%, 51%, 1) 44%, hsla(251, 82%, 17%, 1) 95%);
+   --background1: #000000;
+   --background2: rgb(5, 6, 45);
+ }

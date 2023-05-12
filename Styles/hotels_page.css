@@ -1,0 +1,262 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 250vh;
+  width: 100%;
+  background-color: var(--background1);
+}
+
+.navbar {
+  border-bottom-style: solid;
+  border-bottom-color: white;
+  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  border-width: 1.2px;
+  width: 88%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: 50px;
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0px;
+  margin-left: 5%;
+  z-index: 99;
+}
+
+.logo {
+  width: 100%;
+  height: 50px;
+  grid-row: 1;
+  grid-column: 1 /2;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.log-in-button {
+  grid-row: 1;
+  grid-column: 3;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-in-button a {
+  color: var(--mainColor);
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.log-in-button a:hover {
+  color: white;
+}
+
+.log-in-button a:active {
+  transform: scale(0.9);
+}
+
+.sections {
+  grid-row: 1;
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+.sections a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  width: 1fr;
+  border-top-style: solid;
+  border-top-width: 1.2px;
+  border-top-color: transparent;
+  transition-duration: 0.5s;
+}
+
+.sections a:hover {
+  border-top-color: var(--mainColor);
+}
+
+.header-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  padding-left: 5%;
+  background-color: var(--background2);
+}
+
+.header-container:hover {
+  cursor: default;
+}
+
+.header-container h1 {
+  border-left: solid 5px var(--mainColor);
+  padding-left: 0.8%;
+  margin-bottom: 1.2%;
+  width: 60%;
+  color: white;
+}
+
+.header-container p {
+  width: 60%;
+  color: white;
+  margin-bottom: 1%;
+}
+
+.hotels-container {
+  width: 100%;
+  height: 190vh;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotels {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hotels > div {
+  width: 30%;
+  height: 30%;
+  border: solid 3px var(--background2);
+  border-radius: 50px;
+  transition-duration: 0.7s;
+}
+
+.hotels > div:hover {
+   transform: scale(1.05);
+   cursor: pointer;
+   border-color: var(--mainColor);
+ }
+ 
+ .hotels > div:active {
+   transform: scale(0.94);
+ }
+
+.hotels > div > div.img {
+  height: 50%;
+  width: 100%;
+  border-bottom: solid 6px var(--mainColor);
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+}
+
+.hotels > div > div.img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+}
+
+.hotels > div > div.info {
+  height: 38%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--background2);
+}
+
+.hotels > div > div.info h2 {
+  width: 90%;
+  height: 50%;
+  padding-top: 8%;
+  color: white;
+  transition: 300ms;
+}
+
+.hotels > div > div.info .name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  color: white;
+}
+
+.hotels > div > div.info .name i {
+  color: var(--mainColor);
+  margin-right: 4%;
+  height: 50%;
+  font-size: 20px;
+}
+
+.hotels > div > div.info .name p {
+  width: auto;
+}
+
+.hotels > div > div.reserve {
+  height: 12%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background2);
+  border-bottom-right-radius: 45px;
+  border-bottom-left-radius: 45px;
+}
+
+.hotels > div > div.reserve .review {
+  width: 42%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 3%;
+}
+
+.hotels > div > div.reserve .review i {
+  width: auto;
+  height: auto;
+  color: yellow;
+  font-size: 20px;
+}
+
+.hotels > div > div.reserve .review p {
+  color: white;
+  width: auto;
+  font-size: 15px;
+}
+
+.hotels > div > div.reserve .button {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotels > div > div.reserve .button button {
+  width: 63%;
+}
+
+.hotels > div > div.reserve {
+  height: 12%;
+  width: 100%;
+}
+
+.info h2:hover {
+  cursor: pointer;
+}
