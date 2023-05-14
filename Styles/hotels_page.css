@@ -183,7 +183,7 @@ body {
 .hotels > div > div.info h2 {
   width: 90%;
   height: 50%;
-  padding-top: 8%;
+  padding-top: 2%;
   color: white;
   transition: 300ms;
 }

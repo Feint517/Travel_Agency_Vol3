@@ -1,5 +1,3 @@
-
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,30 +14,31 @@ html {
 body {
   height: 400vh;
   background-color: black;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-   width: 10px;
- }
- 
- ::-webkit-scrollbar-track {
-   background-color: black;
-   border: solid 1px transparent;
-   border-radius: 20px;
- }
+  width: 10px;
+}
 
- ::-webkit-scrollbar-thumb {
-   background-color: var(--mainColor);
-   border-radius: 20px;
- }
+::-webkit-scrollbar-track {
+  background-color: black;
+  border: solid 1px transparent;
+  border-radius: 20px;
+}
 
- ::-webkit-scrollbar-thumb:hover {
-   background-color: var(--background2);
- }
+::-webkit-scrollbar-thumb {
+  background-color: var(--mainColor);
+  border-radius: 20px;
+}
 
- ::-webkit-scrollbar-corner {
-   background-color: transparent;
- }
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--background2);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
 
 .up-section-container {
   width: 100%;
@@ -193,7 +192,6 @@ body {
   margin-top: 5%;
 }
 
-
 .container {
   width: 80%;
   height: 90%;
@@ -229,15 +227,14 @@ body {
 }
 
 .about-us-section {
-   width: 100%;
-   height: 120vh;
-   box-shadow: 5px -60px 20px black;
-   background-color: var(--background1);
-   display: flex;
-   justify-content: center;
-   align-items: center;
- } 
-
+  width: 100%;
+  height: 120vh;
+  box-shadow: 5px -60px 20px black;
+  background-color: var(--background1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .about-text {
   color: white;
@@ -292,14 +289,14 @@ body {
 }
 
 .stats > div p {
-   color: var(--mainColor);
+  color: var(--mainColor);
   text-align: center;
   font-size: 150%;
   font-weight: bolder;
 }
 
 .stats > div p span {
-   color: white;
+  color: white;
   font-size: 60%;
   font-weight: 300;
 }
@@ -437,7 +434,7 @@ button:active {
 }
 
 .places .description h2 span {
-   color: var(--mainColor);
+  color: var(--mainColor);
 }
 
 .places .description p {
@@ -456,7 +453,6 @@ button:active {
   grid-template-rows: repeat(14, 1fr);
   grid-gap: 10px;
 }
-
 
 .newYork {
   grid-row: 1 / 6;
@@ -536,7 +532,7 @@ button:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   background-color: var(--background2);
 }
 
@@ -554,71 +550,85 @@ button:active {
 }
 
 .packages > div {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   width: 45%;
-   height: 22%;
-   border-radius: 30px;
-   border: solid 1px white;
-   cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 19%;
+  height: 70%;
+  border: solid 1px white;
+  cursor: default;
+  transition: 400ms;
+  border-radius: 30px;
 }
 
-.packages > div h3 {
-   width: 35%;
-   height: 30%;
-   color: var(--mainColor);
+.packages > div:hover {
+  transform: scale(1.09);
 }
 
-.packages > div span {
-   width: 25%;
-   height: 30%;
-   border: solid 1px white;
-   border-radius: 20px;
-   backdrop-filter: blur(5px);
-   color: white;
-   text-align: center;
-   transition: 300ms;
-   cursor: pointer;
-   display: flex;
-   align-items: center;
+.packages > div .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transition: 300ms;
+  opacity: 0;
+}
+
+.packages > div .content:hover {
+  backdrop-filter: blur(7px);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.packages > div .content span {
+  width: 90%;
+  height: 15%;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  transition: 300ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .packages > div span a {
-   width: 100%;
-   height: 60%;
-   text-decoration: none;
-   color: white;
-}
-
-.packages > div span:hover {
-   transform: scale(1.1);  
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--mainColor);
+  font-size: 50px;
 }
 
 .packages .europe {
-   background-image: url('../Assets/Images/home_page/packages-europe.jpg');
-   background-size: cover;
-   background-repeat:no-repeat ;
+  background-image: url("../Assets/Images/home_page/packages-europe.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 40%;
 }
 
 .packages .africa {
-   background-image: url('../Assets/Images/home_page/packages-africa.jpg');
-   background-size: 100% 100%;
+  background-image: url("../Assets/Images/home_page/packages-africa.jpg");
+  background-size: cover;
+  background-position: 40%;
 }
 
 .packages .asia {
-   background-image: url('../Assets/Images/home_page/packages-asia.jpg');
-   background-size: 100% 100%;
+  background-image: url("../Assets/Images/home_page/packages-asia.jpg");
+  background-size: cover;
+  background-position: 40%;
 }
 
 .packages .australia {
-   background-image: url('../Assets/Images/home_page/packages-australia.jpg');
-   background-size: 100% 100%;
+  background-image: url("../Assets/Images/home_page/packages-australia.jpg");
+  background-size: cover;
 }
 
 .packages .north-america {
-   background-image: url('../Assets/Images/home_page/packages-north_america.jpg');
-   background-size: 100% 100%;
+  background-image: url("../Assets/Images/home_page/packages-north_america.jpg");
+  background-size: cover;
 }
 
 .reviews {
@@ -635,7 +645,7 @@ button:active {
 .reviews .text {
   width: auto;
   height: 30%;
-  margin-top: 5%;
+  margin-top: 1.5%;
   padding-left: 5%;
   display: flex;
   align-items: flex-start;
@@ -692,8 +702,8 @@ button:active {
 }
 
 .reviews .people > div .info .name p:hover {
-   text-decoration: underline;
-   cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .reviews .people > div .content {
@@ -750,20 +760,23 @@ button:active {
   height: 50vh;
   background-color: var(--background1);
   display: flex;
-  flex-direction: column;
+ flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
-.contact h2{
-   width: auto;
-   height: auto;
-   text-align: center;
-   color: var(--mainColor);
+.contact h2 {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  color: var(--mainColor);
 }
 
 .contact p {
-   text-align: center;
-   color: white;
+  text-align: center;
+  color: white;
+  width: 90%;
+  height: 30%;
 }
 
 .input-group {
@@ -781,8 +794,8 @@ button:active {
   padding: 0 1rem;
   color: #fff;
   font-size: 15px;
-   border-top-style: hidden;
-   border-left-style: hidden;
+  border-top-style: hidden;
+  border-left-style: hidden;
   border-bottom: 1px solid var(--mainColor);
   border-radius: 6px 0 0 6px;
   background-color: transparent;
@@ -813,96 +826,140 @@ button:active {
 .footer-section {
   width: 100%;
   height: 40vh;
-  border: 1px solid white;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-section .background {
-   width: 100%;
-   height: 40vh;
-   object-fit: cover;
-   opacity: 0.5;
-   position: absolute;
-   z-index: -1;
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
 }
 
 .footer-section .links {
-   border: solid blue 1px;
-   width: 80%;
-   height: 87%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+  width: 80%;
+  height: 87%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-section .links .consultation {
-   width: 23%;
-   height: 100%;
-   border: blue solid 1px;
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
+  width: 23%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .consultation .text {
-   width: 100%;
-   height: 81%;
+  width: 100%;
+  height: 81%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.consultation .text p {
-   font-size: 10px;
-   color: white;
-   padding: 0px;
-   text-align: center;
+.consultation .text span.one {
+  color: white;
+  font-weight: 400;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  font-size: 11px;
 }
 
-.consultation .text p span {
-   color: var(--mainColor);
-   font-weight: 600;
+.consultation .text span.two {
+  color: var(--mainColor);
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  font-weight: 400;
 }
 
 .consultation .icons {
-   width: 100%;
-   height: 19%;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
+  width: 100%;
+  height: 19%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .consultation .icons > a {
-   width: 15%;
-   border-radius: 30px;
-   display: flex;
-   justify-content: center;
-   align-items: center; 
+  width: 15%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .consultation .icons > a i {
-   transition: 300ms;
+  transition: 300ms;
 }
 
 .consultation .icons > a i:hover {
-   transform: scale(1.35);
-   color: var(--mainColor);
+  transform: scale(1.35);
+  color: var(--mainColor);
 }
 
 .consultation .icons > a i {
-   font-size: 20px;
-   color: white;
+  font-size: 20px;
+  color: white;
+}
+
+.footer-section .links .quick-links {
+  width: 77%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+.footer-section .links .quick-links h3 {
+  width: 100%;
+  height: 10%;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  color: var(--mainColor);
+}
+
+.footer-section .links .quick-links span {
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-section .links .quick-links span a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section .links .quick-links span a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .footer-section .copyrights {
-   width: 100%;
-   height: 13%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  width: 100%;
+  height: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-section .copyrights p {
-   color: white;
-   font-size: 12px;
-   font-weight: 300;
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
 }
